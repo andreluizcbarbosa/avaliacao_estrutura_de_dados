@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="" id="form">
+        <main>
+            <section>
+                <h1>Formulário</h1>
+                <h3>Adicione um nome:</h3>
+                <div>
+                    <input type="text" name="nome" id="nome" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$"
+                        placeholder="Digite apenas letras" required><br><br>
+                    <input type="submit" onclick="adicionar()" value="Inserir">
+
+                    <input type="button" onclick="limpar()" value="Limpar">
+
+                </div>
+            </section>
+            <section>
+                <h3>Escolha uma opção:</h3>
+                <div>
+                    <input type="radio" name="opcao" value="lista" id="lista">
+                    <label for="lista">Lista</label>
+                </div>
+                <div>
+                    <input type="radio" name="opcao" value="pilha" id="pilha">
+                    <label for="pilha">Pilha</label>
+                </div>
+            </section>
+
+            <div>
+                <h3>Resultado</h3>
+                <table border="1">
+                    <thead>
+                        <th>Nomes Adicionados</th>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </main>
+    </form>
+
+</body>
+
+</html>
